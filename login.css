@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: rgb(240, 240, 240);
+    font-family: "Asap", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header img {
+    width: 200px;
+}
+
+.formulario{
+    margin-bottom: 80px;
+}
+
+.formulario {
+    background-color: #ffffff;
+    width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario .p1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.formulario .p2 {
+    margin: 0;
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario p {
+    margin: 0;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.formulario input[type="text"], .formulario input[type="password"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.formulario input[type="text"]:focus,  .formulario input[type="password"]:focus {
+    border-color: #6c63ff;
+}
+
+.botonIniciar {
+    background-color: #6c63ff;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.botonIniciar:hover {
+    background-color: #5a53cc;
+}
+
+.error {
+    background-color: #ffdddd;
+    color: #d8000c;
+    padding: 10px;
+    border: 1px solid #d8000c;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.success {
+    background-color: #ddffdd;
+    color: #008000;
+    padding: 10px;
+    border: 1px solid #008000;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
