@@ -12,7 +12,7 @@ $coleccion = $database->tarjetas;
 $id = $_POST['id'];
 $nuevoEstado = $_POST['estado'];
 
-// Traducir los IDs de columna a los nombres de estado en la BD
+// Traducir los IDs de columna a los nombres de estado en la base de datos
 $estadoMap = [
     "ideas" => "IDEAS",
     "toDo" => "TO DO",
