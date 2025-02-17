@@ -10,7 +10,6 @@ body {
     align-items: center;
 }
 
-/* Encabezado */
 header {
     background-color: #6c63ff;
     color: white;
@@ -21,9 +20,14 @@ header {
     font-weight: bold;
 }
 
-/* Botón de Cerrar Sesión */
+header form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .botonCerrar {
-    background-color: #ff4c4c;
+    background-color: #5a53cc;
     color: white;
     border: none;
     padding: 8px 15px;
@@ -31,14 +35,14 @@ header {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 10px;
+    width: auto;
 }
 
 .botonCerrar:hover {
-    background-color: #cc0000;
+    background-color: #948fff;
 }
 
-/* Botón para abrir el modal */
+
 .botonAbrirModal {
     background-color: #6c63ff;
     color: white;
@@ -54,14 +58,13 @@ header {
     background-color: #5a53cc;
 }
 
-/* Estilos del modal */
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Centrar el modal */
+    transform: translate(-50%, -50%);
     width: 400px;
     background-color: white;
     border-radius: 10px;
@@ -74,7 +77,8 @@ header {
     position: relative;
 }
 
-.cerrarModal {
+.cerrarModal,
+.cerrarModalEditar {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -82,7 +86,6 @@ header {
     cursor: pointer;
 }
 
-/* Formulario dentro del modal */
 form {
     display: flex;
     flex-direction: column;
@@ -94,11 +97,6 @@ input, textarea {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-textarea {
-    resize: none;
-    height: 80px;
 }
 
 input[type="submit"] {
@@ -115,17 +113,6 @@ input[type="submit"]:hover {
     background-color: #5a53cc;
 }
 
-/* Estilos del input de colaboradores */
-#colaboradores {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Estilos del tablero y columnas */
 .tablero {
     display: flex;
     gap: 20px;
@@ -158,23 +145,61 @@ input[type="submit"]:hover {
     border-radius: 6px;
 }
 
-/* Estilos de las tarjetas */
 .tarjeta {
     background-color: #ffffff;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 6px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: grab;
+    cursor: pointer;
     text-align: center;
     font-weight: bold;
 }
 
-.tarjeta:hover {
-    background-color: #e0e0ff;
+.notas {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
 }
 
-/* Adaptación para dispositivos móviles */
+.mensaje {
+    margin: 3px 0;
+    padding: 3px;
+    background: #e0e0ff;
+    border-radius: 4px;
+}
+
+.botonAgregarNota {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.botonAgregarNota:hover {
+    background-color: #5a53cc;
+}
+
+.botonEditar {
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.botonEditar:hover {
+    background-color: #ff8c00;
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
     .tablero {
         flex-direction: column;
