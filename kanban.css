@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap');
+
+body {
+    font-family: "Asap", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+header {
+    background-color: #6c63ff;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Botón de Cerrar Sesión */
+.botonCerrar {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.botonCerrar:hover {
+    background-color: #cc0000;
+}
+
+/* Botón para abrir el modal */
+.botonAbrirModal {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botonAbrirModal:hover {
+    background-color: #5a53cc;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrar el modal */
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.modalContenido {
+    position: relative;
+}
+
+.cerrarModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Formulario dentro del modal */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+input[type="submit"] {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #5a53cc;
+}
+
+/* Estilos del input de colaboradores */
+#colaboradores {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos del tablero y columnas */
+.tablero {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    justify-content: center;
+}
+
+.columna {
+    width: 250px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.columna h2 {
+    background-color: #6c63ff;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 0 0 10px;
+}
+
+.zonaTareas {
+    min-height: 200px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+/* Estilos de las tarjetas */
+.tarjeta {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tarjeta:hover {
+    background-color: #e0e0ff;
+}
+
+/* Adaptación para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .tablero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .columna {
+        width: 90%;
+    }
+    .modal {
+        width: 90%;
+    }
+}

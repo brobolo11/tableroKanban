@@ -25,7 +25,7 @@ try {
             if ($usuario) {
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $usuario['nombre'];
-                header('Location: inicio.php');
+                header('Location: kanban.php');
                 exit();
             } else {
                 header('Location: index.html?error=credenciales');
